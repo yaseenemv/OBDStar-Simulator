@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/linearLayout_grid" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+        <TableRow android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:id="@+id/button_update" android:layout_width="80dp" android:layout_height="wrap_content" android:text="Update" android:textAllCaps="false" style="@style/Widget.AppCompat.Button" />
+            <Button android:id="@+id/button_delete" android:layout_width="40dp" android:layout_height="wrap_content" android:text="X" />
+        </TableRow>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:layout_width="200dp" android:layout_height="wrap_content">
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:layout_gravity="left" android:id="@+id/textview_cmd" android:paddingTop="15dp" android:layout_width="80dp" android:layout_height="wrap_content" android:text="Command: " />
+            <TextView android:textSize="12sp" android:layout_gravity="top" android:id="@+id/textview_cmd_value" android:paddingTop="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hola" />
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:id="@+id/textview_response" android:layout_width="80dp" android:layout_height="31dp" android:text="Response: " />
+            <TextView android:textSize="12sp" android:gravity="center_horizontal" android:id="@+id/textview_response_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hola" />
+        </TableRow>
+    </LinearLayout>
+</RelativeLayout>

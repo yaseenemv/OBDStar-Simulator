@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/abc_action_mode_bar.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/abc_screen_toolbar.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/activity_commands.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/list_item.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/list_item_main.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/notification_template_icon_group.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/notification_template_lines_media.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/notification_template_part_time.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/select_dialog_item_material.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/select_dialog_multichoice_material.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/select_dialog_singlechoice_material.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/state_list_item.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/staupdate_cmd_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_cmd_dialog.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_command_title.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_wait.xml" value="0.19519927536231885" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
