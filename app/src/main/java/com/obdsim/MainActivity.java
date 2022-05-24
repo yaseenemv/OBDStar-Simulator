@@ -3,6 +3,8 @@ package com.obdsim;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -50,10 +52,13 @@ public class MainActivity extends AppCompatActivity {
     private static final int UPDATE_COMMAND = 0;
     private static BluetoothTask listeningThread;
     private static NetworkTask listeningThreadN;
+    ArrayAdapter<String> adapter;
     TextView bluetoothDeviceStatus;
     Switch bluetoothScanButton;
     TextView networkDeviceStatus;
     Switch networkScanButton;
+    StringBuilder stringBuilder = new StringBuilder();
+    String finalString;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals("android.bluetooth.adapter.action.STATE_CHANGED")) {
@@ -103,16 +108,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /* access modifiers changed from: protected */
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) R.layout.activity_main);
-        this.status = (ListView) findViewById(R.id.status);
-        this.startButton = (Button) findViewById(R.id.startButton);
-        this.stopButton = (Button) findViewById(R.id.stopButton);
-        this.bluetoothDeviceStatus = (TextView) findViewById(R.id.bluetoothDeviceStatus);
-        this.networkDeviceStatus = (TextView) findViewById(R.id.networkDeviceStatus);
-        this.bluetoothScanButton = (Switch) findViewById(R.id.bluetoothScanButton);
-        this.networkScanButton = (Switch) findViewById(R.id.networkScanButton);
+        setContentView(R.layout.activity_main);
+        this.status = findViewById(R.id.status);
+        this.startButton = findViewById(R.id.startButton);
+        this.stopButton = findViewById(R.id.stopButton);
+        this.bluetoothDeviceStatus = findViewById(R.id.bluetoothDeviceStatus);
+        this.networkDeviceStatus = findViewById(R.id.networkDeviceStatus);
+        this.bluetoothScanButton = findViewById(R.id.bluetoothScanButton);
+        this.networkScanButton = findViewById(R.id.networkScanButton);
         this.stopButton.setEnabled(false);
         this.status.setAdapter(new ArrayAdapter(this, R.layout.list_item_main, this.states));
         this.dataBaseService = new DataBaseService(this);
@@ -129,10 +134,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (!isChecked) {
 
-                    MainActivity.this.stop((View) null);
+                    MainActivity.this.stop(null);
                 } else if (MainActivity.this.getBluetoothAdapter() == null || MainActivity.this.getBluetoothAdapter().isEnabled()) {
 
-                    MainActivity.this.start((View) null);
+                    MainActivity.this.start(null);
                 } else {
                     MainActivity.this.startActivityForResult(new Intent("android.bluetooth.adapter.action.REQUEST_ENABLE"), 1);
                     return;
@@ -176,14 +181,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /* access modifiers changed from: protected */
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         setIp();
     }
 
     private void setIp() {
-        TextView tvIp = (TextView) findViewById(R.id.ipTV);
-        TextView mcTV = (TextView) findViewById(R.id.mcTV);
+        TextView tvIp = findViewById(R.id.ipTV);
+        TextView mcTV = findViewById(R.id.mcTV);
         String ip = null;
         String address = null;
         try {
@@ -208,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /* access modifiers changed from: private */
-    public boolean wifiState() {
+    private boolean wifiState() {
         return ((WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE)).isWifiEnabled();
     }
 
@@ -328,12 +333,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showCommands(View v) {
+
         startActivity(new Intent(this, CommandsActivity.class));
     }
 
     public void showStateCommands(View v) {
-        startActivity(new Intent(this, StateCommandsActivity.class));
+        // startActivity(new Intent(this, StateCommandsActivity.class));
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("label", finalString);
+        clipboard.setPrimaryClip(clip);
+        Toast.makeText(this, "Copied", Toast.LENGTH_SHORT).show();
     }
+
 
     /* access modifiers changed from: protected */
     public BluetoothAdapter startBluetooth() {
@@ -371,8 +382,10 @@ public class MainActivity extends AppCompatActivity {
         if (type.intValue() == 4) {
             newState = "[INFO][SENT] " + newState;
         }
+        stringBuilder.append(newState + "\n");
+        finalString = stringBuilder.toString();
         this.states.add(newState);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item_main, this.states);
+        adapter = new ArrayAdapter<>(this, R.layout.list_item_main, this.states);
         this.status.setAdapter(adapter);
         this.status.setSelection(adapter.getCount());
     }
@@ -384,12 +397,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /* access modifiers changed from: private */
-    public BluetoothAdapter getBluetoothAdapter() {
+    private BluetoothAdapter getBluetoothAdapter() {
         return BluetoothAdapter.getDefaultAdapter();
     }
 
     /* access modifiers changed from: protected */
-    public void onDestroy() {
+    protected void onDestroy() {
         BluetoothAdapter ba = getBluetoothAdapter();
         if (ba != null && ba.isEnabled()) {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
