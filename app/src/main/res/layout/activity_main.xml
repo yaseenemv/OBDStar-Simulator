@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#9A9D9E"
+    android:backgroundTint="#F9FAFA"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:text="Your MAC:192.58.10.0"
-            android:textColor="@android:color/background_light"
+            android:textColor="#00796B"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:text="Your IP:192.58.10.0"
-            android:textColor="@android:color/background_light"
+            android:textColor="#0097A7"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
                     android:textColor="#000000"
                     android:textOff="OFF"
                     android:textOn="ON"
-                    android:thumbTint="@android:color/background_light"
+                    android:thumbTint="#00796B"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
@@ -106,7 +106,7 @@
                     android:switchMinWidth="56dp"
                     android:textOff="OFF"
                     android:textOn="ON"
-                    android:thumbTint="@android:color/background_light"
+                    android:thumbTint="#0097A7"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
@@ -155,11 +155,11 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_weight="1"
-                android:backgroundTint="#D6C7C7"
+                android:backgroundTint="#0097A7"
                 android:onClick="showCommands"
                 android:text="Command List"
                 android:textAllCaps="false"
-                android:textColor="#000000" />
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/stateCommandButton"
@@ -187,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:divider="@null"
                 android:dividerHeight="0dp"
-                android:textColor="#000000" />
+                android:textColor="#00796B" />
         </RelativeLayout>
 
 
