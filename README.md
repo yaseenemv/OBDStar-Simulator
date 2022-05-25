@@ -8,6 +8,7 @@ OBD Simulator ELM327 works as your real hardware device and returns you response
 - Supports all ODBII Simulator ELM327 protocols.
 - Add new commands to Simulator.
 - Update existing commands.
+- Added copy function
 
 
 ## Screenshots
