@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.obdsim">
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -18,16 +17,57 @@
         android:theme="@style/Theme.AppCompat">
 
 
-        <activity android:name="com.obdsim.MainActivity" android:screenOrientation="portrait"
+        <activity
+            android:name="com.obdsim.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.obdsim.CommandsActivity" android:screenOrientation="fullSensor"/>
-        <activity android:name="com.obdsim.StateCommandsActivity" android:screenOrientation="fullSensor"/>
+        <activity
+            android:name="com.obdsim.CommandsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.obdsim.StateCommandsActivity"
+            android:screenOrientation="fullSensor" />
+
+        <!--        <provider-->
+        <!--            android:name=".data.NotesProvider"-->
+        <!--            android:authorities="com.obdsim"-->
+        <!--            android:exported="false" />-->
+        <provider
+            android:name=".data.NotesProvider"
+            android:authorities="com.obdsim"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <activity
+            android:name=".activities.EditorActivity"
+            android:label="@string/title_activity_editor"
+            android:parentActivityName=".activities.MainSave"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainSave" />
+        </activity>
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".activities.MainSave"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainSave" />
+        </activity>
+        <activity
+            android:name="com.obdsim.activities.MainSave"
+            android:parentActivityName=".activities.MainSave"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

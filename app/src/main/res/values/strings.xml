@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">Navigate home</string>
-    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
-    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
     <string name="abc_action_mode_done">Done</string>
@@ -10,18 +8,6 @@
     <string name="abc_activitychooserview_choose_application">Choose an app</string>
     <string name="abc_capital_off">OFF</string>
     <string name="abc_capital_on">ON</string>
-    <string name="abc_font_family_body_1_material">sans-serif</string>
-    <string name="abc_font_family_body_2_material">sans-serif-medium</string>
-    <string name="abc_font_family_button_material">sans-serif-medium</string>
-    <string name="abc_font_family_caption_material">sans-serif</string>
-    <string name="abc_font_family_display_1_material">sans-serif</string>
-    <string name="abc_font_family_display_2_material">sans-serif</string>
-    <string name="abc_font_family_display_3_material">sans-serif</string>
-    <string name="abc_font_family_display_4_material">sans-serif-light</string>
-    <string name="abc_font_family_headline_material">sans-serif</string>
-    <string name="abc_font_family_menu_material">sans-serif</string>
-    <string name="abc_font_family_subhead_material">sans-serif</string>
-    <string name="abc_font_family_title_material">sans-serif-medium</string>
     <string name="abc_search_hint">Search…</string>
     <string name="abc_searchview_description_clear">Clear query</string>
     <string name="abc_searchview_description_query">Search query</string>
@@ -33,10 +19,8 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="accepted">BluetoothSocket Accepted.</string>
     <string name="app_name">OBDStar Simulator</string>
-    <string name="connected">Connected!</string>
     <string name="connecting">Waiting for connection...</string>
     <string name="connection_closed">Connection closed.</string>
-    <string name="finished_reading_bytes">Finished reading bytes.</string>
     <string name="no_bluetooth">Device does not support Bluetooth</string>
     <string name="no_bluetooth_adapter">No BluetoothAdapter.</string>
     <string name="null_socket">Null BluetoothSocket.</string>
@@ -49,15 +33,36 @@
     <string name="problem_closing_socket">Problem closing BluetoothSocket.</string>
     <string name="problem_receiving">Connection lost, can not receive bytes.</string>
     <string name="process_terminated">Process Terminated.</string>
-    <string name="reading_bytes">Reading bytes...</string>
     <string name="receiving">Receiving data...</string>
-    <string name="s1">Save image</string>
-    <string name="s2">Allow Ad to store image in Picture gallery?</string>
-    <string name="s3">Accept</string>
-    <string name="s4">Decline</string>
-    <string name="s5">Create calendar event</string>
-    <string name="s6">Allow Ad to create a calendar event?</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stopped_listening">Stopped Listening.</string>
+    <string name="action_delete_all_notes">Delete all notes</string>
+    <string name="all_notes_deleted_message">All notes deleted</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="title_activity_editor" translatable="false">EditorActivity</string>
+    <string name="action_delete_note">Delete note</string>
+    <string name="note_edit_text_hint">Enter your note here</string>
+    <string name="editor_title_insert_new_note">New note</string>
+    <string name="editor_title_edit_note">Note editor</string>
+    <string name="note_updated_message">Note updated</string>
+    <string name="note_deleted_message">Note deleted</string>
+    <string name="no_notes_to_delete_message">There\'re no notes to delete</string>
+    <string name="note_dummy_text" translatable="false">A dummy text</string>
+    <string name="last_edited_text_view">Last edited:</string>
+    <string name="dummy_date" translatable="false">yyyy-MM-dd HH:mm:ss</string>
+    <string name="no_notes_msg">There\'re no notes to display.\n Start adding some by pressing \'+\' button below.</string>
+    <string name="action_about">About</string>
+    <string name="title_activity_about">About My Notes</string>
+    <string name="app_description">A simple &amp; open source note-taking app.</string>
+    <string name="app_version_name">Version %1$s</string>
+    <string name="view_on_github_button_text">View app on Github</string>
+    <string name="github_repo_url" translatable="false">https://github.com/Abdallah-Abdelazim/MyNotes</string>
+    <string name="playstore_url" translatable="false">/store/apps/details?id=com.aa.mynotes</string>
+    <string name="share_app_chooser_dialog_title">Share the app with a friend</string>
+    <string name="share_app_fab_content_description">Share the app with a friend</string>
+    <string name="share_app_subject">I recommend you to try this great app: %s</string>
+    <string name="share_app_text">%1$s: %2$s Install it from: %3$s\n</string>
+    <string name="action_share_note">Share note</string>
+    <string name="share_note_chooser_dialog_title">Share note using</string>
 </resources>

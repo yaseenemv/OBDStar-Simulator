@@ -12,14 +12,22 @@
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/notification_template_icon_group.xml" value="0.1" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/notification_template_lines_media.xml" value="0.1" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/notification_template_part_time.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/save_activity_about.xml" value="0.14719202898550723" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/save_activity_editor.xml" value="0.14719202898550723" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/save_activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/save_content_about.xml" value="0.14719202898550723" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/save_content_editor.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/save_content_main.xml" value="0.14855072463768115" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/select_dialog_item_material.xml" value="0.1" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/select_dialog_multichoice_material.xml" value="0.1" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/select_dialog_singlechoice_material.xml" value="0.1" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/state_list_item.xml" value="0.2" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/staupdate_cmd_dialog.xml" value="0.4" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_cmd_dialog.xml" value="0.19519927536231885" />
-        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_command_title.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_command_title.xml" value="0.25" />
         <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/layout/update_wait.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/menu/commands.xml" value="0.2" />
+        <entry key="..\:/Users/91954/AndroidStudioProjects/ODBSim2/app/src/main/res/menu/main.xml" value="0.1" />
       </map>
     </option>
   </component>

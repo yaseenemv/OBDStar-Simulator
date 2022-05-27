@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/linearLayout_grid" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
-        <TableLayout android:gravity="center_vertical" android:paddingTop="4dp" android:layout_width="wrap_content" android:layout_height="90dp" android:layout_weight="1">
-            <TextView android:textSize="16sp" android:id="@+id/textview_cmd_value" android:paddingLeft="16dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hola"/>
-            <TextView android:textSize="16sp" android:id="@+id/textview_response_value" android:paddingLeft="16dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hola"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:weightSum="1">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/textview_cmd_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:text="Hola"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textview_response_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:text="Hola"
+                android:textSize="16sp" />
         </TableLayout>
-        <TableRow android:gravity="center_vertical" android:paddingTop="4dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="90dp" android:layout_weight="0.1">
-            <Button android:id="@+id/button_update" android:paddingLeft="15dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Update" android:textAllCaps="false" style="@style/Widget.AppCompat.Button"/>
-            <Button android:id="@+id/button_delete" android:layout_width="40dp" android:layout_height="wrap_content" android:text="X"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_weight="0.1"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp">
+
+            <Button
+                android:id="@+id/button_update"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Update"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/button_delete"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="X" />
         </TableRow>
     </TableRow>
 </RelativeLayout>

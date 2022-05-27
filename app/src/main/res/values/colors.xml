@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Green/Red Colors -->
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#f44336</color>
+    <color name="colorSecondaryTex">#ffffff</color>
+    <color name="green">#4CAF50</color>
+
+</resources>

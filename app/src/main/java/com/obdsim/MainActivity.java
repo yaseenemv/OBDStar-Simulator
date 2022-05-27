@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -31,6 +32,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.obdsim.activities.MainSave;
+import com.obdsim.data.DBOpenHelper;
+import com.obdsim.data.NotesProvider;
 import com.obdsim.persistence.DataBaseService;
 import com.obdsim.tasks.BluetoothTask;
 import com.obdsim.tasks.NetworkTask;
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
     int waitTime = 0;
     private DataBaseService dataBaseService;
     private Button startButton;
@@ -125,6 +130,18 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.ACCESS_WIFI_STATE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 1);
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().build());
         }
+
+//        final int RC_EDITOR = 111;
+//Button ff = findViewById(R.id.savecmd);
+//        ff.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Toast.makeText(MainActivity.this,"gggg", Toast.LENGTH_SHORT).show();
+//                startActivityForResult(new Intent(MainActivity.this, EditorActivity.class), RC_EDITOR);
+//            }
+//
+//        });
 
         this.bluetoothScanButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -178,6 +195,12 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction("android.bluetooth.adapter.action.STATE_CHANGED");
         filter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
         registerReceiver(this.mReceiver, filter);
+    }
+
+    private void insertNote(String noteText) {
+        ContentValues values = new ContentValues();
+        values.put(DBOpenHelper.NOTE_TEXT, noteText);
+        getContentResolver().insert(NotesProvider.CONTENT_URI, values);
     }
 
     /* access modifiers changed from: protected */
@@ -345,6 +368,14 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Copied", Toast.LENGTH_SHORT).show();
     }
 
+    public void Savethecmd(View v) {
+        insertNote(finalString);
+        startActivity(new Intent(this, MainSave.class));
+    }
+
+    public void viewthesave(View v) {
+        startActivity(new Intent(this, MainSave.class));
+    }
 
     /* access modifiers changed from: protected */
     public BluetoothAdapter startBluetooth() {
