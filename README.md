@@ -9,6 +9,7 @@ OBD Simulator ELM327 works as your real hardware device and returns you response
 - Add new commands to Simulator.
 - Update existing commands.
 - Added copy function
+- Save commands and edits
 
 
 ## Screenshots
