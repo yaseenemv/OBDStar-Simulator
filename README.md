@@ -17,9 +17,8 @@ OBD Simulator ELM327 works as your real hardware device and returns you response
 
 ## Screenshots
 
-![App Screenshot](https://github.com/yaseenemv/OBDStar-Simulator/blob/master/img/2.jpg?raw=true)
-![App Screenshot](https://github.com/yaseenemv/OBDStar-Simulator/blob/master/img/3.jpg?raw=true)
-![App Screenshot](https://github.com/yaseenemv/OBDStar-Simulator/blob/master/img/1.jpg?raw=true)
+![App Screenshot](https://github.com/yaseenemv/OBDStar-Simulator/blob/master/img/v1.1/v1.1-img1.jpeg?raw=true)
+![App Screenshot](https://github.com/yaseenemv/OBDStar-Simulator/blob/master/img/v1.1/v1.1-img2.jpeg?raw=true)
 
 ## Contributing
 
