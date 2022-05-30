@@ -1,6 +1,8 @@
 
 # OBD Simulator
 
+The software can listen the application receiving and sending instructions
+
 OBD Simulator ELM327 works as your real hardware device and returns you response.It works on both Bluetooth and WiFi.
 
 ## Features
